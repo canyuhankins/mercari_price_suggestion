@@ -20,9 +20,16 @@ The task is to build an algorithm that automatically suggests the right product 
   * The item_description have 4 missing values.
   * Instead of dropping the missing values or fill in them with mean/median/mode, I fill in "none" and hoping there will be some useful information in the item_description where I can fill in the gap. 
 
-* Dealing with category_name variable
+* Dealing with category_name variable column
   * create sub-categories for different category
   * ![image](https://user-images.githubusercontent.com/89665013/226462934-0b9660bc-1b38-48d5-99e1-6c93055594e4.png)
   * According to the plot, items in the "Women" categort is the No.1 category which contains about 45% of the whole data set.
+  * sub-category 1 
+  *![image](https://user-images.githubusercontent.com/89665013/227037527-e9a8a3a9-ebc4-4bf3-bd00-40402bc77df8.png)
 
-* Dealing with category
+
+* Dealing with item_description column
+ * text mining task
+ * Convert uppercase into lowercase because uppercase != lowercase
+ * Remove punctuation by using the string library.
+ * Remove filling/stop words in the column.
