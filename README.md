@@ -27,9 +27,8 @@ The task is to build an algorithm that automatically suggests the right product 
   * sub-category 1 
   *![image](https://user-images.githubusercontent.com/89665013/227037527-e9a8a3a9-ebc4-4bf3-bd00-40402bc77df8.png)
 
-
 * Dealing with item_description column
- * text mining task
- * Convert uppercase into lowercase because uppercase != lowercase
- * Remove punctuation by using the string library.
- * Remove filling/stop words in the column.
+  * text mining task
+  * Convert uppercase into lowercase because uppercase != lowercase
+  * Remove punctuation by using the string library.
+  * Remove filling/stop words in the column.
