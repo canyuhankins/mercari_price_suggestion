@@ -39,3 +39,26 @@ The task is to build an algorithm that automatically suggests the right product 
 * item condition distribution
   ![image](https://user-images.githubusercontent.com/89665013/235507825-1e096d39-a1fd-4e94-9517-8a941ac61dbf.png)
 
+* Word cloud
+
+![image](https://user-images.githubusercontent.com/89665013/235523903-f15b3128-54f4-4be6-be62-e5b3367f2fe8.png)
+
+### Problem Formulation
+- Input: different features for the item for sale, the most importand variable is the item descrition, because it provides information about the item.
+- Output: predicting sales prive based on the input
+- Model used:
+  - Ridge
+  
+  
+### Training
+  - The data preprocessing/data cleaning part pretty time consuming and need lots of careful  consideration before fit into the model, also the model selection needs some fitting and playing around
+  
+### Performance Comparison
+- The metric to evaluate the model is Root Mean Squared Logarithmic Error (RMSLE):
+![image](https://user-images.githubusercontent.com/89665013/235526587-25cfa00d-cb9a-41d8-a404-4b8037e5b303.png)
+
+
+
+  
+  
+  
