@@ -34,4 +34,8 @@ The task is to build an algorithm that automatically suggests the right product 
   * Remove filling/stop words in the column.
 
 * Price distribution
-  * ![image](https://user-images.githubusercontent.com/89665013/235506074-4a51dcf7-7183-469d-8d66-34022fb5432b.png)
+   ![image](https://user-images.githubusercontent.com/89665013/235506074-4a51dcf7-7183-469d-8d66-34022fb5432b.png)
+  
+* item condition distribution
+  ![image](https://user-images.githubusercontent.com/89665013/235507825-1e096d39-a1fd-4e94-9517-8a941ac61dbf.png)
+
