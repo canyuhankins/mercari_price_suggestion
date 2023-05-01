@@ -32,3 +32,6 @@ The task is to build an algorithm that automatically suggests the right product 
   * Convert uppercase into lowercase because uppercase != lowercase
   * Remove punctuation by using the string library.
   * Remove filling/stop words in the column.
+
+* Price distribution
+  * ![image](https://user-images.githubusercontent.com/89665013/235506074-4a51dcf7-7183-469d-8d66-34022fb5432b.png)
