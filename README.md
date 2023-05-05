@@ -47,11 +47,16 @@ The task is to build an algorithm that automatically suggests the right product 
 - Input: different features for the item for sale, the most importand variable is the item descrition, because it provides information about the item.
 - Output: predicting sales prive based on the input
 - Model used:
-  - Ridge
+  - Ridge: 0.60
+  - LGBM: 0.31
+  - XGBoost: 0.40
+  The r-square scorefor ridge regression is the highest, meaning the it is a better model to fit for the dataset
+
   
   
 ### Training
-  - The data preprocessing/data cleaning part pretty time consuming and need lots of careful  consideration before fit into the model, also the model selection needs some fitting and playing around
+  - The data preprocessing/data cleaning part pretty time consuming and need lots of careful  consideration before fit into the model, also the model selection needs some fitting and playing around.
+  - Used LDA as the model
   
 ### Performance Comparison
 - The metric to evaluate the model is Root Mean Squared Logarithmic Error (RMSLE):
