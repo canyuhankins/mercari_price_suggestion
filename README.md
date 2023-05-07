@@ -20,6 +20,7 @@ The task is to build an algorithm that automatically suggests the right product 
   * The item_description have 4 missing values.
   * Instead of dropping the missing values or fill in them with mean/median/mode, I fill in "none" and hoping there will be some useful information in the item_description where I can fill in the gap. 
 
+#### Data visualization
 * Dealing with category_name variable column
   * create sub-categories for different category
   * ![image](https://user-images.githubusercontent.com/89665013/226462934-0b9660bc-1b38-48d5-99e1-6c93055594e4.png)
@@ -47,23 +48,57 @@ The task is to build an algorithm that automatically suggests the right product 
 - Input: different features for the item for sale, the most importand variable is the item descrition, because it provides information about the item.
 - Output: predicting sales prive based on the input
 - Model used:
-  - Ridge: 0.60
-  - LGBM: 0.31
-  - XGBoost: 0.40
-  The r-square scorefor ridge regression is the highest, meaning the it is a better model to fit for the dataset
-
-  
+  - Ridge
+  - LGBM
   
 ### Training
-  - The data preprocessing/data cleaning part pretty time consuming and need lots of careful  consideration before fit into the model, also the model selection needs some fitting and playing around.
+  - The data preprocessing/data cleaning part pretty time consuming and need lots of careful consideration before fit into the model, also the model selection needs some fitting and playing around.
   - Used LDA as the model
   
 ### Performance Comparison
 - The metric to evaluate the model is Root Mean Squared Logarithmic Error (RMSLE):
 ![image](https://user-images.githubusercontent.com/89665013/235526587-25cfa00d-cb9a-41d8-a404-4b8037e5b303.png)
 
+- Ridge: 0.60
+- LGBM: 0.48
+- The r-square score for ridge regression is higher, meaning the it is a better model to fit for the dataset, therefore I'll use ridge regression as the final prediction model.
+
+## Conclusions
+* The ridge regression model is a better model to use out of the 2, since the r-square score is higher then LGBM model. Below is the prediction for the test dataset based off the train dataset:
+* ![image](https://user-images.githubusercontent.com/89665013/236702724-28868faf-53ed-436b-b7ef-d58dac2d644d.png)
+* I spent about 60~70% of my work doing data cleaning/preprocessing, because over half of the variables are not numeric value, they are more of the text data, so convert these text data into useful information took me some time. Overall, it was a interesting project to work on, it really gives me some good exposure dealing with text data, and I used some NLP such as the natural language tool kit (nltk) package to clean the text, and also learned about tokenization, stemming, lemmazation which is essential for text data. 
 
 
+### Future Work
+
+* I would like to sure different model such as other regression model like lasso regression, and XGboosting. I also would like do perform different data cleaning techniques on these text data, especially the 'item description' column, so see if the resule is going to be better than what I currently got.
+* Althought this project covered some basics about NLP, this project didn't really touch too much about NLP, so I would like to find other project that is more relevant in using NLP, maybe sentimental analysis would be a good next step for me.
   
-  
-  
+## How to reproduce results
+
+* Set up the enviroment and install nesscessary packages: numpy, pandas, matplotlib, sklearn, nltk, ridge, lightgbm, CountVectorizer, TfidfVectorizer, LabelBinarizer, vstack, hstack, csr_matrix, LatentDirichletAllocation
+* Data cleaning:
+ * Basic cleaning: 
+   - excluding filling/stop words in the description column
+   - lower case everything
+   - remove punctuation, digits
+ * Prepare the text in these steps before put it into the model:
+   - tokenization - splitting text into words
+   - stemming - removing the ending of the word (getting the root word)
+   - lemmazation - similar to stemming, but instead of cutting the ending of the word, this consider the original word meaning, more expensive
+   - Use CountVectorizer to count word frequency.
+   - Use Label Binarizer to encode different labels into numeric values.
+   - Combine everything into sparse matrix.
+ * Model selection:
+   - Use the r-sqaured value to determine which model fits better
+ * Apply the model.
+ 
+## Citations
+
+ * https://www.kaggle.com/competitions/mercari-price-suggestion-challenge/overview
+ * https://www.kaggle.com/code/thykhuely/mercari-interactive-eda-topic-modelling
+ * https://www.kaggle.com/code/dogdriip/mercari-vectorizer-labelbinarizer-lgbmregressor#Target's-distribution
+
+ 
+ 
+ 
